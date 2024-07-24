@@ -83,13 +83,13 @@ namespace MyProgram
             productList3.Add(new Product("Hot Dog", 2.99));
             order3 = (new Order(new Customer("Chris"), productList3));
 
-            List<Order> allOrder = new List<Order>();
-            allOrder.Add(order1);
-            allOrder.Add(order2);
-            allOrder.Add(order3);
+            List<Order> allOrders = new List<Order>();
+            allOrders.Add(order1);
+            allOrders.Add(order2);
+            allOrders.Add(order3);
 
             double total = 0;
-            foreach (var order in allOrder)
+            foreach (var order in allOrders)
             {
                 total += order.GetTotalPrice();
                 Console.WriteLine(order.Customer.Name + " " + Math.Round(order.GetTotalPrice(), 2));
